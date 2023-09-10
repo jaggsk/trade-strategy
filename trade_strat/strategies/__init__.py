@@ -1,2 +1,1 @@
-from .crossover import crossover
-from .threshold import indicator_threshold
+from .weekly_stoch_rsi import weekly_stoch_rsi
