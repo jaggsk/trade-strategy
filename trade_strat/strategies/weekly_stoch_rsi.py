@@ -1,5 +1,5 @@
 import pandas_ta as pta
-import trade_strat.indicators as id
+import trade_strat as ts
 
 class weekly_stoch_rsi:
 
@@ -53,7 +53,7 @@ class weekly_stoch_rsi:
 
         self.df["EMA GRAD"] = self.df["EMA"].diff()        
         self.df['Close > EMA'] = (self.df["Close"] > self.df["EMA"]).astype(int)
-        self.df['Stoch RSI K threshold'] = id.indicator_threshold(column = self.df['srsik'], upper_threshold = self.stoch_rsi_upper, lower_threshold = self.stoch_rsi_lower)
-        self.df['Crossover'] = id.crossover(self.df['srsik'],self.df['srsid'])
+        self.df['Stoch RSI K threshold'] = ts.indicator_threshold(column = self.df['srsik'], upper_threshold = self.stoch_rsi_upper, lower_threshold = self.stoch_rsi_lower)
+        self.df['Crossover'] = ts.crossover(self.df['srsik'],self.df['srsid'])
         
         return self.df
