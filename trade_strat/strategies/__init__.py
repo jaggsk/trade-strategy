@@ -1,1 +1,1 @@
-from .weekly_stoch_rsi import weekly_stoch_rsi
+from .triple_ema_stoch_rsi import triple_ema_stoch_rsi
