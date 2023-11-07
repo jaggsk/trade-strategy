@@ -1,1 +1,2 @@
 from .triple_ema_stoch_rsi import triple_ema_stoch_rsi
+from .double_rsi import double_rsi
